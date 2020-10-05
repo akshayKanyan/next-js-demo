@@ -3,10 +3,29 @@
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  overflow: auto;
 }
 
+.rowWrapper{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.rowContent{
+  display: flex;
+  flex-direction: row;
+}
+.rowTitle{
+  font-weight: bold;
+  margin-right: 30px;
+  width: 200px;
+}
+.cart-button{
+  width: 200px;
+  margin-top: 10px;
+  color: yellowgreen;
+  cursor: pointer;
+}
 .main {
   padding: 5rem 0;
   flex: 1;

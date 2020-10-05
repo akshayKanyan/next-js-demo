@@ -1,11 +1,26 @@
 .container {
-    flex:1;
-    padding: 0 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+  flex:1;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.rowWrapper{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.rowContent{
+  display: flex;
+  flex-direction: row;
+}
+.rowTitle{
+  font-weight: bold;
+  margin-right: 30px;
+  color: tomato;
+  width: 100px;
+}
   
   .main {
     padding: 5rem 0;

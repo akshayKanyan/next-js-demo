@@ -2,10 +2,16 @@ import App from 'next/app';
 import React from 'react';
 import Link from "next/link";
 import "../styles/globals.css"
+export const CartContext = React.createContext();
 
 
 class MyApp extends App {
   state = { cartValue: 0 }
+
+
+  setCartValue = () => {
+    this.setState({ cartValue: this.state.cartValue + 1 })
+  }
 
 
   render() {
@@ -17,9 +23,11 @@ class MyApp extends App {
         <div className="header">
           <div><Link href="/">UPSCRIPT HEALTH</Link></div>
           <div className={`link-title`}><Link href="howItWorks">How It Works</Link></div>
-          <div className={`cart`} onClick={_ => { this.setState({ cartValue: this.state.cartValue + 1 }) }}>cart {this.state.cartValue}</div>
+          <div className={`cart`}>cart {this.state.cartValue}</div>
         </div>
-        <Component {...pageProps} />
+        <CartContext.Provider value={{ cartValue: this.state.cartValue, setCartValue: this.setCartValue }}>
+          <Component {...pageProps} />
+        </CartContext.Provider>
       </div>
     );
   }
