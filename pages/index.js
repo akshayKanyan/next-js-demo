@@ -1,6 +1,7 @@
 import styles from '../styles/Home.module.css'
 import axios from "axios";
-import Link from "next/link"
+import Link from "next/link";
+import Grid from '@material-ui/core/Grid';
 import { CartContext } from "./_app";
 
 export const getStaticProps = async (context) => {
@@ -22,6 +23,60 @@ export const getStaticProps = async (context) => {
 export default function Home({ postData }) {
   return (
     <div className={styles.container}>
+      <Grid container>
+        <Grid item classes={{ root: styles["height-100"] }}>
+          <div className={styles.banner}>
+
+          </div>
+        </Grid>
+        <Grid item xs={12} classes={{ root: styles["height-100"] }}>
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+              <div className={`${styles.tile} ${styles.tileColor1}`}></div>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+              <div className={`${styles.tile} ${styles.tileColor1}`}></div>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+              <div className={`${styles.tile} ${styles.tileColor1}`}></div>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+              <div className={`${styles.tile} ${styles.tileColor1}`}></div>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+              <div className={`${styles.tile} ${styles.tileColor1}`}></div>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+              <div className={`${styles.tile} ${styles.tileColor1}`}></div>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+              <div className={`${styles.tile} ${styles.tileColor1}`}></div>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+              <div className={`${styles.tile} ${styles.tileColor1}`}></div>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+              <div className={`${styles.tile} ${styles.tileColor1}`}></div>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+              <div className={`${styles.tile} ${styles.tileColor1}`}></div>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+              <div className={`${styles.tile} ${styles.tileColor1}`}></div>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+              <div className={`${styles.tile} ${styles.tileColor1}`}></div>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+              <div className={`${styles.tile} ${styles.tileColor1}`}></div>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+              <div className={`${styles.tile} ${styles.tileColor1}`}></div>
+            </Grid>
+            <Grid item></Grid>
+          </Grid>
+        </Grid>
+      </Grid>
       {
         postData.map(_ => {
           return (

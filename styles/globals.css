@@ -18,13 +18,62 @@ a {
 
 .header {
   display: flex;
-  max-height: 50px;
-  min-height: 50px;
-  background-color: chartreuse;
+  max-height: 35px;
+  min-height: 35px;
+  background-color: #193630;
   flex:1;
   padding: 0px 20px;
   align-items: center;
   justify-content: space-between;
+}
+.header-text{
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  margin: auto;
+  font-size: 14px;
+  color: white;
+}
+
+.header-grid{
+  height: 55px;
+  min-height: 55px;
+  max-height: 55px;
+  background-color: white;
+}
+
+.up-logo{
+  height: 28px;
+width: 86px;
+left: 25.9140625px;
+top: 12.671875px;
+border-radius: 0px;
+position: absolute;
+}
+.header-content-grid{
+  position: relative;
+  flex: 1;
+}
+
+.header-content-grid1{
+ height: 100%;
+ justify-content: center;
+ align-items: center;
+ display: flex;
+}
+.heaeder-1{
+  display: flex;
+}
+.heaeder-2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+.heaeder-3{
+  display: flex;
 }
 
 .cart{
@@ -42,7 +91,6 @@ a {
   display: flex;
   flex:1;
   flex-direction: column;
-  background-color: cornsilk;
   min-height: 100vh;
   max-height: 100vh;
 }
