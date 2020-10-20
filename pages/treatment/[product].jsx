@@ -13,11 +13,13 @@ export const getStaticProps = async (context) => {
         }
     )
 
-    let staticData = await axios.get(`http://localhost:3000/api/products`).then(
-        _ => {
-            return _.data;
-        }
-    )
+    // let staticData = await axios.get(`http://localhost:3000/api/products`).then(
+    //     _ => {
+    //         return _.data;
+    //     }
+    // )
+
+    let staticData = 0;
 
     return {
         revalidate: 10,
