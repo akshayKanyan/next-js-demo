@@ -13,13 +13,11 @@ export const getStaticProps = async (context) => {
         }
     )
 
-    // let staticData = await axios.get(`http://localhost:3000/api/products`).then(
-    //     _ => {
-    //         return _.data;
-    //     }
-    // )
-
-    let staticData = 0;
+    let staticData = await axios.get(process.env.NODE_ENV === "development" ? `http://localhost:3000/api/products` : "https://next-js-demo-akshay.herokuapp.com/api/products").then(
+        _ => {
+            return _.data;
+        }
+    )
 
     return {
         revalidate: 10,
@@ -38,7 +36,6 @@ export const getStaticPaths = async (context) => {
 }
 
 export default function Product({ postData = "", staticData = { price: '' } }) {
-    console.log("xxxxxxxxx", postData);
     return (
         <div>
             <div className={styles.container} dangerouslySetInnerHTML={{ __html: postData }}></div>
