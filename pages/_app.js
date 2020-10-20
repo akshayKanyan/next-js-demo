@@ -3,6 +3,7 @@ import React from 'react';
 import Link from "next/link";
 import Grid from '@material-ui/core/Grid';
 import "../styles/globals.css"
+import "../styles/treatment.css"
 export const CartContext = React.createContext();
 
 
