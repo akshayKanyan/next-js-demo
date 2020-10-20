@@ -1,5 +1,5 @@
 export default (req, res) => {
     res.statusCode = 200;
-    console.log("xxxxxxxx", req)
-    res.json({ price: ("$" + Math.random() * 10) })
+    let num = Math.random()*100
+    res.json({ price: "$" + Math.trunc(num) })
 }

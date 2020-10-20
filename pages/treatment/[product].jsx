@@ -37,9 +37,9 @@ export const getStaticPaths = async (context) => {
 
 export default function Product({ postData = "", staticData = { price: '' } }) {
     return (
-        <div>
+        <div className={styles.wrapper}>
             <div className={styles.container} dangerouslySetInnerHTML={{ __html: postData }}></div>
-            <div className={styles.container} >{staticData.price}</div>
+            <div className={`${styles.container} ${styles.price}`} >{staticData.price}</div>
         </div>
     )
 }

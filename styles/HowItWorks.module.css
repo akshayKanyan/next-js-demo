@@ -137,3 +137,15 @@
     }
   }
   
+
+  .wrapper{
+
+  }
+
+  .price{
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 18;
+    margin-top: 10px;
+  }
